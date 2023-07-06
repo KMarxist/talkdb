@@ -1,4 +1,3 @@
-import fetch from 'node-fetch';
 import { setTimeout } from 'timers/promises';
 import IGetRes from '../types/IGetRes.js';
 import range from '../utils/range.js';
