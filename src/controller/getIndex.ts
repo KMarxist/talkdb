@@ -9,7 +9,7 @@ const getIndex = async () => {
     const text = await readFile('./data.json', 'utf-8');
     data = JSON.parse(text);
   } catch (e) {}
-  const lastDataId = data[0].article_id;
+  const lastDataId = (data[0] as IListItem | undefined)?.article_id;
   const step = 20;
   const res = await getPage(1);
   console.log(Math.floor(res.totalPage / step));
